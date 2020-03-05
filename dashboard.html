@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Abner Ferreira">
+
+  <title>Dashboard :: INGest</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon-16.png" sizes="16x16">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="img/favicon-48.png" sizes="48x48">
+  <link rel="icon" href="img/favicon-64.png" sizes="64x64">
+  <link rel="icon" href="img/favicon-128.png" sizes="128x128">
+  <!-- iPad com Retina Display -->
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+  <!-- iPhone com Retina Display -->
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <!-- Primeira e segunda geração de iPad -->
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <!-- Versões antigas de iPhone, iPod Touch e Android 2.2+  -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="img/favicon-16.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  
+
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img src="img/brand.png"  width="32px" height="32px" alt="">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav text-center">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Movimentações<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Entradas</a></li>
+                  <li><a href="#">Saídas</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Clientes</a></li>
+              <li><a href="#">Contas</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right text-center">
+              <li class="dropdown">
+                <a class="dropdown-toggle hidden-xs ttp" data-toggle="dropdown" data-toggle="tooltip" data-placement="bottom" title="Pesquisar"><span class="glyphicon glyphicon-search"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-menu-nav ">
+                      <form class="navbar-form">
+                        <div class="input-group">
+                          <input type="text" class="form-control input-lg form-search" placeholder="Faça uma pesquisa..." style="width: 315px;">
+                            <div class="input-group-btn">
+                              <button class="btn btn-default btn-lg" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                              </button>
+                            </div>
+                        </div>
+                      </form>
+                    </li>
+                  </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle hidden-xs ttp" data-toggle="dropdown" data-toggle="tooltip" data-placement="bottom" title="Notificações"><span class="glyphicon glyphicon-bell"></span></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-menu-nav">
+                      <ul class="list-unstyled">
+                        <li>
+                        <li class="text-center" style="border-bottom: 2px solid #dad7d7"><h5><strong>Notificações</strong></h5></li>
+                          <ul class="notification-menu" style="max-height: 400px; right:0; overflow: auto; padding: 0; margin: 0;">
+                            <a href="#" class="list-group-item active" style="border-radius: 0;">
+                              <h4 class="list-group-item-heading">Nova Compra no Site</h4>
+                              <p class="list-group-item-text">Compra Realizada pelo usuário John Doe via Pagseguro</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Existe uma Conta em Atraso</h4>
+                              <p class="list-group-item-text">A conta DASMEI está com pagamento atrasado há 2 dias para evitar multa e/ou juros regularize o pagamento.</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">+10 Clientes Novos</h4>
+                              <p class="list-group-item-text">10 novos clientes foram cadastrados no sistema recentemente.</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Nota Fiscal Autorizada</h4>
+                              <p class="list-group-item-text">Nota Fiscal nº 000435 foi emitida e enviada ao usuário João de Brito por email</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Produto sem Estoque</h4>
+                              <p class="list-group-item-text">Você tem produtos sem estoque no catálogo, verifique e ajuste seu estoque.</p>
+                            </a>
+                            <a href="#" class="list-group-item active">
+                              <h4 class="list-group-item-heading">Nova Compra no Site</h4>
+                              <p class="list-group-item-text">Compra Realizada pelo usuário John Doe via Pagseguro</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Existe uma Conta em Atraso</h4>
+                              <p class="list-group-item-text">A conta DASMEI está com pagamento atrasado há 2 dias para evitar multa e/ou juros regularize o pagamento.</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">+10 Clientes Novos</h4>
+                              <p class="list-group-item-text">10 novos clientes foram cadastrados no sistema recentemente.</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Nota Fiscal Autorizada</h4>
+                              <p class="list-group-item-text">Nota Fiscal nº 000435 foi emitida e enviada ao usuário João de Brito por email</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Produto sem Estoque</h4>
+                              <p class="list-group-item-text">Você tem produtos sem estoque no catálogo, verifique e ajuste seu estoque.</p>
+                            </a>
+                            <a href="#" class="list-group-item active">
+                              <h4 class="list-group-item-heading">Nova Compra no Site</h4>
+                              <p class="list-group-item-text">Compra Realizada pelo usuário John Doe via Pagseguro</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Existe uma Conta em Atraso</h4>
+                              <p class="list-group-item-text">A conta DASMEI está com pagamento atrasado há 2 dias para evitar multa e/ou juros regularize o pagamento.</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">+10 Clientes Novos</h4>
+                              <p class="list-group-item-text">10 novos clientes foram cadastrados no sistema recentemente.</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Nota Fiscal Autorizada</h4>
+                              <p class="list-group-item-text">Nota Fiscal nº 000435 foi emitida e enviada ao usuário João de Brito por email</p>
+                            </a>
+                            <a href="#" class="list-group-item" style="border-radius: 0;">
+                              <h4 class="list-group-item-heading">Produto sem Estoque</h4>
+                              <p class="list-group-item-text">Você tem produtos sem estoque no catálogo, verifique e ajuste seu estoque.</p>
+                            </a>
+                          </ul>
+                          <li class="text-center" style="border-top: 2px solid #dad7d7"><a href=""><h6><strong>Ver Todas as Notificações</strong></h6></a></li>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle hidden-xs ttp" data-toggle="dropdown" data-toggle="tooltip" data-placement="bottom" title="Configurações"><span class="glyphicon glyphicon-cog"></span></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-menu-nav">
+                      <ul class="list-unstyled">
+                        <div class="list-group">
+                          <li><a href="" class="list-group-item">Configurações de Usuário</a></li>
+                          <li><a href="" class="list-group-item">Ajustes do Sistema</a></li>
+                          <li><a href="" class="list-group-item">Ajuda e Suporte</a></li>
+                        </div>
+                      </ul>
+                    </li>
+                  </ul>
+              </li>
+              <li class="text-center"><a href="" data-toggle="modal" data-target="#modalLogout"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+            </ul>
+          </div>
+        </div>
+  </nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="modal fade" id="modalLogout" role="dialog" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header ">
+            <strong class="pull-left">Sair</strong>
+            <button type="button" class="close pull-right" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only" >Fechar janela modal</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h4>Tem certeza que deseja do sair sistema?</h4>
+          </div>
+          <div class="modal-footer">
+            <a href="index.html"><button type="button" class="btn btn-primary">Sim</button></a>
+            <button type="button" class="btn btn-danger" data-dismiss="modal"><a href="#index.html"></a>Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="col-sm-2 col-md-2 col-lg-2 hidden-xs bg-faded nav-sidebar">
+    <div class="container">
+      <ul class="nav nav-stacked affix ">
+        <li class="text-center">
+          <img src="img/profile.jpg" alt="" class="img-circle img-responsive img-thumbnail" style="margin-top: 10px; margin-bottom: ; width: 90px; height: 90px;">
+            <h4>Abner Ferreira</h4>
+            <h6 class="">Administrador de Sistema</h6>
+        </li>
+        <hr>
+        <li class="active">
+          <a href="#"><span class="glyphicon glyphicon-dashboard"></span><strong> Dashboard</strong><span class="sr-only">(atual)</span></a>
+        </li>
+        <li>
+          <a href="#submenu-catalogo" aria-controls="submenu-catalogo" aria-expanded="false" data-toggle="collapse"><span class="glyphicon glyphicon-barcode "></span><strong> Catálogo </strong><span class="caret"></span></a>
+          <div class="collapse" id="submenu-catalogo">
+            <ul class="nav nav-sidebar submenu-sidebar">
+              <li><a href="">Produtos</a></li>
+              <li><a href="">Categorias</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#submenu-movimentacoes" aria-controls="submenu-movimentacoes" aria-expanded="false" data-toggle="collapse"><span class="glyphicon glyphicon-usd "></span><strong> Movimentações </strong><span class="caret"></span></a>
+          <div class="collapse" id="submenu-movimentacoes">
+            <ul class="nav nav-sidebar submenu-sidebar" >
+              <li><a href="">Compras</a></li>
+              <li><a href="">Vendas</a></li>
+              <li><a href="">Orçamentos</a></li>
+              <li><a href="">Impostos</a></li>
+              <li><a href="">Despesas não Declaradas</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#submenu-contatos" aria-controls="submenu-contatos" aria-expanded="false" data-toggle="collapse"><span class="glyphicon glyphicon-user "></span><strong> Contatos </strong><span class="caret"></span></a>
+          <div class="collapse" id="submenu-contatos">
+            <ul class="nav nav-sidebar submenu-sidebar">
+              <li><a href="">Clientes</a></li>
+              <li><a href="">Fornecedores</a></li>
+              <li><a href="">Fabricantes</a></li>
+              <li><a href="">Funcionários</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"><span class="glyphicon glyphicon-stats "></span><strong> Relatórios</strong></a>
+        </li>
+      </ul>
+    </div>
+    </nav> 
+
+    <div class="col-sm-10 col-md-10 col-lg-10 main-content">
+      <div class="panel panel-default panel-heading ">
+          <h3 class="panel-main">Dashboard</h3>
+      </div>
+      <small>
+            <ol class="breadcrumb">
+              <li><a href="dashboard.html"><span class="glyphicon glyphicon-home active"></span> Dashboard</a></li>
+            </ol>
+      </small>
+      <div class="row">
+          <div class="col-lg-12">
+            <section class="row">
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading"><h4>Venda Último Mês</h4></div>
+                    <div class="panel-body">
+                      <h4 class="text-primary"><span class="label label-primary pull-right">+ 24%</span> R$14.547,58</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                  <div class="panel panel-warning">
+                    <div class="panel-heading"><h4>Produtos Sem Estoque</h4></div>
+                    <div class="panel-body">
+                      <h4 class="text-warning"><span class="label label-warning pull-right">- 9%</span> 84 Produtos </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                  <div class="panel panel-danger">
+                    <div class="panel-heading"><h4>Venda Canceladas</h4></div>
+                    <div class="panel-body">
+                      <h4 class="text-danger"><span class="label label-danger pull-right">- 2%</span> 54 Vendas </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                  <div class="panel panel-success">
+                    <div class="panel-heading"><h4>Vendas no Mesmo Período</h4></div>
+                    <div class="panel-body">
+                      <h4 class="text-success"><span class="label label-success pull-right">+ 31%</span> 290 Vendas </h4>
+                    </div>
+                  </div>
+                </div>
+            </section>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col col-lg-6">
+                <div id="chart-linha"></div>
+              </div>
+              <div class="col col-lg-6">
+                <div id="chart-pizza"></div>
+              </div>
+            </div>
+          </div>
+          <ul class="nav nav-tabs">
+            <li class=""><a data-toggle="tab" href="#home">10 Produtos Mais Vendidos</a></li>
+            <li><a data-toggle="tab" href="#menu1">10 Produtos Menos Vendidos</a></li>
+            <li><a data-toggle="tab" href="#menu2">10 Clientes que Mais Compram</a></li>
+          </ul>
+          <div class="tab-content">
+           <div id="home" class="tab-pane fade in active">
+            <section class="col-lg-12">
+                    <div class="panel painel-default">
+                      <div class="panel-heading">
+                        <h2 class="panel-title text-center">10 Produtos Mais Vendidos</h2>
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table table-hover table-striped table-bordered bg-info">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Produto</th>
+                              <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Pen drive PCTop 16GB</td>
+                            <td>R$32,00</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Teclado USB Genius</td>
+                            <td>R$29,90</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Monitor LG 24" Full HD</td>
+                            <td>R$420,00</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Processador Intel Core i5 LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Processador Intel Core i3 LGA1151</td>
+                            <td>R$479,90</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Processador Intel Core i7 6700k LGA1151</td>
+                             <td>R$1539,90</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Placa Mãe Asus Rog LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Processador Intel Core i5 LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                              <td>Processador Intel Core i5 LGA1151</td>
+                              <td>R$639,90</td>
+                              </tr>
+                          <tr>
+                            <td>10</td>
+                            <td>Processador Intel Core i5 LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div id="menu1" class="tab-pane fade">
+              <section class="col-lg-12">
+
+                  <div class="panel painel-primary">
+                    <div class="panel-heading">
+                      <h2 class="panel-title text-center">10 Produtos Menos Vendidos</h2>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-hover table-bordered bg-danger">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Produto</th>
+                            <th>Valor</th>  
+                          </tr> 
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Pen drive PCTop 16GB</td>
+                            <td>R$32,00</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Teclado USB Genius</td>
+                            <td>R$29,90</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Monitor LG 24" Full HD</td>
+                            <td>R$420,00</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Processador AMD Semprom Dual-Core AM1</td>
+                            <td>R$639,90</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Processador Intel Core i5 LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Processador Intel Core i5 LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Processador Intel Core i5 LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Processador Intel Core i5 LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>Processador Intel Core i5 LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td>Processador Intel Core i5 LGA1151</td>
+                            <td>R$639,90</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+               <div id="menu2" class="tab-pane fade">
+              <section class="col-lg-12">
+                <div class="panel painel-primary">
+                  <div class="panel-heading">
+                    <h2 class="panel-title text-center">10 Clientes Que Mais Compram</h2>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-hover table-bordered bg-success">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Nome</th>
+                          <th>Email</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>John Doe</td>
+                          <td>john.doe@einfonation.com</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>João de Brito</td>
+                          <td>joao.Brito@einfonation.com</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Ana Carolina</td>
+                          <td>ana.carol@einfonation.com</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Roberto Pires</td>
+                          <td>roberto.pires@einfonation.com</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>Thayane Torres</td>
+                          <td>thaytorres@einfonation.com</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>Priscila dos Santos</td>
+                          <td>priscila.santos@einfonation.com</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>Thamires Vasconcelos</td>
+                          <td>thamires.vasconcelos@einfonation.com</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>Hugo Olá</td>
+                          <td>hugo.ola@einfonation.com</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>Uellison Pinto</td>
+                          <td>uellison.pinto@einfonation.com</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>Bruno Souza</td>
+                          <td>bruno.souza@einfonation.com</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row text-center">
+            <div class="col col-lg-6">
+              <div id="chart-linha"></div>
+            </div>
+            <div class="col col-lg-6">
+              <div id="chart-pizza"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--JAVASCRIPT INLINE-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/graphics.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chart/highcharts.js" type="text/javascript"></script>
+<script src="js/chart/exporting.js" type="text/javascript"></script>
+
+</body>
+</html>

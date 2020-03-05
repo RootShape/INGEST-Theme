@@ -1,0 +1,137 @@
+/*CHANGE STYLE OF THE SCROLL'S PAGE */
+
+ html::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+html::-webkit-scrollbar-button{
+   -webkit-box-shadow: inset 0 0 6px #dad7d7;
+   border-radius: 10px;
+}
+html::-webkit-scrollbar {
+    width: 8px;
+    background: #F4F4F4;
+    border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+    border-radius: 10px;
+}
+
+.notification-menu::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.notification-menu::-webkit-scrollbar {
+    width: 7px;
+    background: #F4F4F4;
+    border-radius: 10px;
+}
+.notification-menu::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+    border-radius: 10px;
+}
+
+/*html::-webkit-scrollbar {
+    width: 12px;
+}
+
+html::-webkit-scrollbar-button{
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,5);
+   border-radius: 5px;
+}
+ 
+html::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+ 
+html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+*/
+/*END SCROLL*/
+
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+
+.caret-rotation {
+  
+}
+
+.navbar-brand {
+	margin-top: -5px;
+}
+
+.dropdown-menu-nav{
+	width: 395px;
+}
+
+.form-search{
+	width: 380px;
+}
+
+/*
+ * Sidebar
+ */
+
+.nav-stacked{
+   
+}
+
+/* Hide for mobile, show later */
+@media screen and (min-width: 768px) {
+  .nav-stacked {
+    height: 100%;
+    width: 16.7%;
+    padding-top: 10px; 
+    position: fixed;
+    top: 50px;   
+    z-index: 999;
+    overflow-x: auto;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 3px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-stacked {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -30px;
+}
+
+.nav-stacked > .active > a,
+.nav-stacked > .active > a:hover,
+.nav-stacked > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.submenu-sidebar a {
+
+}
+
+.submenu-sidebar a:hover {
+  color: #002266;
+  text-shadow: #000000;
+  background: #b3b3b3;
+}
+
+.breadcrumb {
+  margin-top: -20px;
+
+}
+
+
